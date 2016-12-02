@@ -1,0 +1,8 @@
+
+<% @flyers.each do |x| %>
+
+    <p><strong>Name:</strong> <%= x.firstname %> <%= x.lastname %></p>
+    
+    <%= link_to "More info", flyer_path(x) %>
+    <p>____________________________________</p>
+<% end %>

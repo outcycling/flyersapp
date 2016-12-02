@@ -1,0 +1,21 @@
+<p>User Number <%= @flyer.id %></p>
+    <p><strong>Name:</strong> <%= @flyer.firstname %> <%= @flyer.lastname %></p>
+    <p><strong>Email:</strong> <%= @flyer.email %></p>
+    <p><strong>Birth Date:</strong> <%= @flyer.birthdate %></p>
+    <p><strong>Phone:</strong> <%= @flyer.phone %></p>
+    <p><strong>Address:</strong> <%= @flyer.address %>
+    <p><strong>Apt:</strong>   <%= @flyer.apt %></p>
+    <p><strong>City:</strong> <%= @flyer.city %> 
+    <strong>Zip:</strong> <%= @flyer.zip %></p>
+    <p><strong>School:</strong> <%= @flyer.school %></p>
+    <p><strong>Height:</strong> <%= @flyer.feet %> <%= @flyer.inches %></p>
+    <p><strong>Shirt size:</strong> <%= @flyer.shirt %></p>
+    <p><strong>Can Ride Bike?</strong> <%= @flyer.ridebike %></p>
+    <p><strong>Physical Activity?</strong> <%= @flyer.physical %></p>
+    <p><strong>Activity Description:</strong> <%= @flyer.actdesc %></p>
+    <p><strong>Why Join:</strong> <%= @flyer.whyjoin %></p>
+    <p><strong>Bike Experience:</strong> <%= @flyer.bikeexp %></p>
+    <p><strong>Athletic Experience:</strong> <%= @flyer.athexp %></p>
+    <p><strong>Goal:</strong> <%= @flyer.goal %></p>
+    
+<%= link_to "edit flyer", edit_flyer_path(@flyer) %>

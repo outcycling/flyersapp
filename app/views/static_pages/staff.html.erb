@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fearless Flyers</title>
+        
+        <%= favicon_link_tag 'favicon' %>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600|Roboto:400,500,700" rel="stylesheet">
+        
+        <%= stylesheet_link_tag "application.css" %>
+        
+    </head>
+    <body id="body-youth" >
+    <header id="header">
+        <div id="header-content">
+            
+            <%= link_to '/' do %>
+                <% image_tag 'fearless_logo_crop.jpg', id:"logo", alt:'flyers logo' %>
+            <% end %>
+            
+            
+            
+            <div id="browser-menu-youth" >
+            <a href="/" class="subRide">Home</a>
+            <a href="about.html" class="subRide menu-about selected">About</a>        
+                
+                <nav id="rides-drop">
+                    <ul id="drop-menu">
+                        <p class=" drop-item clearfix"><a href="about">Fearless Flyers Program</a></p>
+<!--                        <p class="drop-item clearfix"><a href="static_pages/board.html">Board Of Directors</a></p>-->
+                        <p class="drop-item clearfix"><a href="staff" class="selected">Board / Staff</a></p>
+                        <p class="drop-item clearfix"><a href="youth">Youth Rider Profiles</a></p>
+                        <p class="drop-item clearfix"><a href="supporters">Supporters</a></p>
+                    </ul>
+                </nav>    
+            <a href="photos" class="subRide">Photos</a>
+            <a href="apply" class="subRide">Apply</a>
+            <a href="sign_in" class="subRide" disabled>Sign-In</a>     
+            <a target="_blank" href="https://flyers2016.causevox.com/" class="subRide" style="color: lightgreen">Donate</a>
+   
+            </div>
+        </div>    
+        <div id="mobile_menu">
+            <a href="/" class="subRide">Home</a>
+            <a href="about.html" class="subRide mobile-menu-about selected">About</a>
+                <div id="mobile-drop">
+                    <p class="mobile-submenu"><a href="about" >Flyers Program</a></p>
+<!--                    <p class="mobile-submenu"><a href="static_pages/board.html">Board Of Directors</a></p>-->
+                    <p class="mobile-submenu"><a href="staff" class="selected">Board / Staff</a></p>
+                    <p class="mobile-submenu"><a href="youth">Youth Rider Profiles</a></p>
+                    <p class="mobile-submenu"><a href="supporters">Supporters</a></p>
+                </div>    
+            <a href="photos" class="subRide">Photos</a>
+            <a href="apply" class="subRide">Apply</a> 
+            <a href="sign_in" class="subRide">Sign In</a>
+            <a target="_blank" href="https://flyers2016.causevox.com/" class="subRide donate-button" style="color: lightgreen">Donate</a>
+        </div>
+         
+        <div id="nav_lines">
+            <p class="hamburger">
+            </p>
+        </div>    
+    </header>
+    <div id="main-content" > 
+        <div class="profile clearfix">    
+            <div class="photo-container">
+                
+                <%= image_tag "graham.jpg", alt:'graham w', class:"profile-photo" %>
+                
+            </div>    
+            <div class="profile-info">
+                <p class="profile-name">Graham Weinstein</p>
+                <p class="profile-title">Founder and Executive Director</p>
+                <p class="profile-desc">Graham Weinstein a life long New Yorker first experienced the power of group cycling when training for and completing a 3-day 275-mile fundraising bike ride from Boston to NYC.  As a novice cyclist and decidedly a non-athlete, Graham's love for cycling was born. In 2009, Graham together with his riding partner at the time created OutCycling, NYC's leading LGBT bike club. The club quickly grew from 10 friends riding together on weekends to a vibrant club of 100+ members hosting a year round calendar of rides and activities.
+                <br><br>
+                In 2013, OutCycling created the first ever NYC Pride Ride with over 100 riders coming together to cycle and celebrate LGBT pride.  This event has grown to an annual event held each June with over 500 participants. It was the success of that event that allowed for the creation of OutCyclng's Youth Initiative - The Fearless Flyers.  The program is in its third year and helps LGBT youth ages 16 - 21 connect to a healthy living through the sport of cycling.
+                <br><br>
+                As a former communications manager for New York Road Runners, Graham worked ten NYC Marathons illustrating the awesome power of bringing people together to push themselves to achieve a collective goal.  Graham lives in New York City with his partner and 4 bikes! </p>
+            </div>
+        </div>       
+        <div class="profile  clearfix">    
+            <div class="photo-container">
+                
+                <%= image_tag 'rafa.jpg', alt:"rafael herrera-lasso", class: "profile-photo" %>
+
+            </div>    
+            <div class="profile-info">
+                <p class="profile-name">Rafael Herrera-Lasso</p>
+                <p class="profile-title">Board Chair, OutCycling</p>
+                <p class="profile-desc">Rafael is Regional Director Marketing and Innovation — Latin America — Wellness at Pfizer. He is a global marketing executive with proven success in multiple CPG categories both in local business units as well as global headquarters.
+                    <br><br>
+                A cycling enthusiast for many years, Rafael was in instrumental in creating and launching the NYC Pride Ride, a community-wide event that brings together cyclists from across the region in celebration of our diversity. </p>
+            </div>
+        </div>
+        <div class="profile  clearfix">    
+            <div class="photo-container">
+                
+                <%= image_tag 'jess.jpg', alt:'jessica benson', class:'profile-photo' %>
+                
+            </div>    
+            <div class="profile-info">
+                <p class="profile-name">Jessica S. Benson</p>
+                <p class="profile-title">Board Treasurer, OutCycling</p>
+                <p class="profile-desc">Jessica S. Benson is Senior Corporate Counsel in the Employment Law Group of Pfizer’s Legal Division. Ms. Benson frequently is called upon to render advice and counsel on various workplace issues and policies.
+                    <br><br>
+                Jessica was born and raised in New York and joined the OutCycling Board in 2014.  The impact that sports and fitness had on Jessica growing up is what inspired her to become involved with OutCycling.  In addition, Jessica is a mother of two teenage boys and believes passionately in teaching kids to find healthy, fun and rewarding hobbies.</p>
+            </div>
+        </div>    
+        <div class="profile clearfix">    
+            <div class="photo-container">
+                
+                <%= image_tag 'andre.jpg', alt: 'andre knights', class: 'profile-photo' %>
+                
+            </div>    
+            <div class="profile-info">
+                <p class="profile-name">Andre Knights</p>
+                <p class="profile-title">Program Manager, Fearless Flyers</p>
+                <p class="profile-desc">An Educator in New York City High Schools, Andre has over 10 years experience in inner-city youth development and education. He is an experienced cyclist and knows first hand the health benefits derived from the sport. Andre is excited to blend his proficiency in youth development programs and passion for urban cycling into a program which help address the challenges youth face: higher risks of violence, suicide and substance abuse — often related to lower self-esteem and societal discrimination. The Fearless Flyers harness the power inherent in each participant to overcome their challenges one mile at a time. </p>
+            </div>
+            
+        </div> 
+        <div class="profile clearfix">    
+            <div class="photo-container">
+                
+                <%= image_tag 'allenrphillips.jpg', alt: 'allen phillips', class: 'profile-photo' %>
+                
+            </div>    
+            <div class="profile-info">
+                <p class="profile-name">Allen R. Phillips</p>
+                <p class="profile-title">Communications</p>
+                <p class="profile-desc">Allen received his BFArch from Parsons School of Design in New York City and his BA Advertising Design from the Art Institute of Houston.
+                      <br><br>
+                Allen is a story-teller, brand manager and artistic director passionate about promoting Healthy Living Through Cycling — one of the key tenants of the OutCycling organization. Empowering the next generation of cyclists through the Fearless Flyers Youth Initiative allows Allen to exercise his experience as an educator and leader. Since joining OutCycling in 2010, he has been an avid cyclist, ride lead and steering committee member.
+                      <br><br>
+                Allen is responsible for all visual documentation and presentation of OutCycling and Fearless Flyers activities, including photography, graphic design, and web design. </p>
+            </div>
+            
+        </div>
+    </div>
+        <div id="partners" class="youth-footer">
+           <ul>
+
+        <!--<li><%= link_to image_tag('center_logo.png'), "https://gaycenter.org/", target:"_blank" %></li>-->
+               
+            <li><%= link_to image_tag('outcyclinglogo.png'), "http://www.outcycling.org/", target:"_blank" %></li>
+
+        <!--<li><%= link_to image_tag('bike_ny.png'), "http://www.bike.nyc/", target:"_blank" %></li> -->
+                
+
+            </ul>
+        </div>    
+        
+        
+        
+     <script src="https://code.jquery.com/jquery-1.12.3.js"   integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="   crossorigin="anonymous"></script>
+        
+        <%= javascript_include_tag "app" %>
+        
+<!--        google analytics below-->
+        
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-81832841-2', 'auto');
+          ga('send', 'pageview');
+
+        </script>        
+        
+    </body>  
+    
+    
+</html>
