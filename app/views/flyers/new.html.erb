@@ -41,7 +41,7 @@
         <%= f.label :physical %> <br>
         <%= text_area(:flyer, :physical) %><br><br>
         <%= f.label :actdesc %> <br>
-        <%= text_area(:v, :actdesc) %><br><br>
+        <%= text_area(:flyer, :actdesc) %><br><br>
         <%= f.label :whyjoin %> <br>
         <%= text_area(:flyer, :whyjoin) %><br><br>
         <%= f.label :bikeexp %> <br>
@@ -50,8 +50,7 @@
         <%= text_area(:flyer, :athexp) %><br><br>
         <%= f.label :goal %> <br>
         <%= text_area(:flyer, :goal) %><br><br>
-        
-                
+        <%= f.password_field :password_digest, :placeholder => "Password" %>     
         <br> <br>
         <%= f.submit "Create" %>
     </div>

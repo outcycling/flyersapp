@@ -1,4 +1,4 @@
-
+ 
 <% @flyers.each do |x| %>
 
     <p><strong>Name:</strong> <%= x.firstname %> <%= x.lastname %></p>
@@ -6,3 +6,11 @@
     <%= link_to "More info", flyer_path(x) %>
     <p>____________________________________</p>
 <% end %>
+
+
+  <% if current_flyer %>
+      <ul>
+        <li><%= current_flyer.email %></li>
+        <li><%= link_to "Log Out", logout_path, method: "delete" %></li>  
+      </ul>
+      <% end %>

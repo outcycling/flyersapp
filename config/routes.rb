@@ -11,8 +11,12 @@ Rails.application.routes.draw do
   patch 'flyers/:id' => 'flyers#update'    
   post '/flyers' => 'flyers#create'       
     
-  get '/login' => 'sessions#new'
-          
+  get '/sign_in' => 'sessions#new', as: :sign_in
+    
+  post '/sign_in' => 'sessions#create'
+    
+  delete 'logout' => 'sessions#destroy'    
+             
     
   root 'static_pages#index'
     

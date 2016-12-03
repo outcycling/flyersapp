@@ -1,7 +1,9 @@
 class FlyersController < ApplicationController
     
+    before_action :require_flyer, only: [:index,:show,:edit,:update]
+    
     def index
-        flash[:notice] = "Flyer Updated!"
+        
        @flyers = Flyer.all 
     end
     
