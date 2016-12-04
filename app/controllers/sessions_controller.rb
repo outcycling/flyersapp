@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     
     def create
        @flyer=Flyer.find_by_email(params[:session][:email])
-        if @flyer && @flyer.authenticate(params[:session][:password_digest])
+        if @flyer && @flyer.authenticate(params[:session][:password])
             session[:flyer_id]=@flyer.id
             redirect_to '/flyers'
         else
