@@ -1,4 +1,42 @@
  
+<% if current_flyer %>
+      
+          <span>Logged In: </span>
+        <span><%= current_flyer.email %></span>
+          <br>
+        <p><%= link_to "Log Out", logout_path, method: "delete",style:"color: grey" %></p>  
+      
+      <% end %>
+
+<%= form_tag(flyers_path, method: "get", id: "search-form") do %>
+    <span>Search Riders by first or last name:</span>
+    <%= text_field_tag :search, params[:search] %>
+
+    
+
+
+    <%= submit_tag "Search" %>
+<% end %>
+
+
+<%= form_tag(flyers_path, :method => "get", id: "search-form") do %>
+<span>Search by Shirt Size:</span>
+        <%= radio_button_tag :shirt, "S" %>
+            <%= label_tag(:shirt, "Small") %>
+        <%= radio_button_tag :shirt, "M" %>
+            <%= label_tag(:shirt, "Medium") %> 
+        <%= radio_button_tag :shirt, "L" %>
+            <%= label_tag(:shirt, "Large") %>
+        <%= radio_button_tag :shirt, "XL" %>
+            <%= label_tag(:shirt, "X-Large") %><br><br>
+        <%= submit_tag "Search" %>
+<% end %>
+
+
+<% if @riders.blank? %>
+  <h4>There are no riders with <%= params[:shirt] %> <%= params[:search] %>.</h4>
+<% end %>
+
 <% @riders.each do |x| %>
 
     <p><strong>Name:</strong> <%= x.firstname %> <%= x.lastname %></p>
@@ -8,11 +46,4 @@
 <% end %>
 
 
-  <% if current_flyer %>
-      <ul>
-          <p>Logged In:</p>
-        <li><%= current_flyer.email %></li>
-          <br>
-        <li><%= link_to "Log Out", logout_path, method: "delete",style:"color: black" %></li>  
-      </ul>
-      <% end %>
+  

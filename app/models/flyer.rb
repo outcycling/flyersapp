@@ -10,4 +10,10 @@ class Flyer < ApplicationRecord
                     uniqueness: { case_sensitive: false }
     
     has_secure_password
+    
+    def self.search(search)
+        where("firstname LIKE ? OR lastname LIKE ? ", "%#{search}%", "%#{search}%") 
+    end
+    
+    
 end
