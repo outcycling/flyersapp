@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
             session[:flyer_id]=@flyer.id
             redirect_to '/flyers'
         else
-            redirect_to 'sign_in'
+            redirect_to '/sign_in'
         end
         
     end
