@@ -1,22 +1,26 @@
 Rails.application.routes.draw do
     
+  get '/riders/new' => 'riders#new'
+  post '/riders' => 'riders#create'    
+    
+    
   get '/flyers' => 'flyers#index'
     
-  get '/flyers/new' => 'flyers#new' 
+#  get '/flyers/new' => 'flyers#new' 
     
-  get '/flyers/:id' => 'flyers#show', as: :flyer 
+  get '/flyers/:id' => 'flyers#show', as: :rider 
     
-  get '/flyers/:id/edit' => 'flyers#edit', as: :edit_flyer    
+  get '/flyers/:id/edit' => 'flyers#edit', as: :edit_rider    
     
   patch 'flyers/:id' => 'flyers#update'    
-  post '/flyers' => 'flyers#create'       
+#  post '/flyers' => 'flyers#create'       
     
   get '/sign_in' => 'sessions#new', as: :sign_in
     
   post '/sign_in' => 'sessions#create'
     
-  delete 'logout' => 'sessions#destroy'    
-             
+  delete 'logout' => 'sessions#destroy'        
+    
     
   root 'static_pages#index'
     

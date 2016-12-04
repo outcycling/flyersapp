@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202214948) do
+ActiveRecord::Schema.define(version: 20161204030837) do
 
   create_table "flyers", force: :cascade do |t|
     t.string   "firstname"
@@ -36,6 +36,33 @@ ActiveRecord::Schema.define(version: 20161202214948) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "riders", force: :cascade do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.date     "birthdate"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "address"
+    t.string   "apt"
+    t.string   "city"
+    t.integer  "zip"
+    t.string   "school"
+    t.integer  "feet"
+    t.integer  "inches"
+    t.string   "shirt"
+    t.string   "ridebike"
+    t.string   "physical"
+    t.text     "actdesc"
+    t.text     "whyjoin"
+    t.text     "bikeexp"
+    t.text     "athexp"
+    t.text     "goal"
+    t.integer  "flyer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["flyer_id"], name: "index_riders_on_flyer_id"
   end
 
 end

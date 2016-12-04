@@ -1,21 +1,21 @@
-<p>User Number <%= @flyer.id %></p>
-    <p><strong>Name:</strong> <%= @flyer.firstname %> <%= @flyer.lastname %></p>
-    <p><strong>Email:</strong> <%= @flyer.email %></p>
-    <p><strong>Birth Date:</strong> <%= @flyer.birthdate %></p>
-    <p><strong>Phone:</strong> <%= @flyer.phone %></p>
-    <p><strong>Address:</strong> <%= @flyer.address %>
-    <p><strong>Apt:</strong>   <%= @flyer.apt %></p>
-    <p><strong>City:</strong> <%= @flyer.city %> 
-    <strong>Zip:</strong> <%= @flyer.zip %></p>
-    <p><strong>School:</strong> <%= @flyer.school %></p>
-    <p><strong>Height:</strong> <%= @flyer.feet %> <%= @flyer.inches %></p>
-    <p><strong>Shirt size:</strong> <%= @flyer.shirt %></p>
-    <p><strong>Can Ride Bike?</strong> <%= @flyer.ridebike %></p>
-    <p><strong>Physical Activity?</strong> <%= @flyer.physical %></p>
-    <p><strong>Activity Description:</strong> <%= @flyer.actdesc %></p>
-    <p><strong>Why Join:</strong> <%= @flyer.whyjoin %></p>
-    <p><strong>Bike Experience:</strong> <%= @flyer.bikeexp %></p>
-    <p><strong>Athletic Experience:</strong> <%= @flyer.athexp %></p>
-    <p><strong>Goal:</strong> <%= @flyer.goal %></p>
+<p>User Number <%= @rider.id %></p>
+    <p><strong>Name:</strong> <%= @rider.firstname %> <%= @rider.lastname %></p>
+    <p><strong>Email:</strong> <%= @rider.email %></p>
+    <p><strong>Birth Date:</strong> <%= @rider.birthdate %></p>
+    <p><strong>Phone:</strong> <%= @rider.phone %></p>
+    <p><strong>Address:</strong> <%= @rider.address %>
+    <p><strong>Apt:</strong>   <%= @rider.apt %></p>
+    <p><strong>City:</strong> <%= @rider.city %> 
+    <strong>Zip:</strong> <%= @rider.zip %></p>
+    <p><strong>School:</strong> <%= @rider.school %></p>
+    <p><strong>Height:</strong> <%= @rider.feet %> <%= @rider.inches %></p>
+    <p><strong>Shirt size:</strong> <%= @rider.shirt %></p>
+    <p><strong>Can Ride Bike?</strong> <%= @rider.ridebike %></p>
+    <p><strong>Physical Activity?</strong> <%= @rider.physical %></p>
+    <p><strong>Activity Description:</strong> <%= @rider.actdesc %></p>
+    <p><strong>Why Join:</strong> <%= @rider.whyjoin %></p>
+    <p><strong>Bike Experience:</strong> <%= @rider.bikeexp %></p>
+    <p><strong>Athletic Experience:</strong> <%= @rider.athexp %></p>
+    <p><strong>Goal:</strong> <%= @rider.goal %></p>
     
-<%= link_to "edit flyer", edit_flyer_path(@flyer) %>
+<%= link_to "Edit Rider", edit_rider_path(@rider), style:"color:gray" %>

@@ -4,25 +4,26 @@ class FlyersController < ApplicationController
     
     def index
         
-       @flyers = Flyer.all 
+       @riders = Rider.all 
+        
     end
     
     def new
-       @flyer = Flyer.new 
+       @rider = Rider.new 
     end
     
     def show
-        @flyer=Flyer.find(params[:id])
+        @rider = Rider.find(params[:id])
     end
     
     
     def edit 
-        @flyer=Flyer.find(params[:id])
+        @rider =Rider.find(params[:id])
     end
     
     def update
-    @flyer = Flyer.find(params[:id])
-        if @flyer.update_attributes(flyer_params)
+    @rider = Rider.find(params[:id])
+        if @rider.update_attributes(rider_params)
             
             redirect_to '/flyers'
         else
@@ -31,8 +32,8 @@ class FlyersController < ApplicationController
     end
     
     def create
-       @flyer = Flyer.new(flyer_params)
-        if @flyer.save
+       @rider = Rider.new(rider_params)
+        if @rider.save
             
             redirect_to '/static_pages/thanks'
         else 
@@ -42,8 +43,8 @@ class FlyersController < ApplicationController
     
     private
     
-    def flyer_params
-        params.require(:flyer).permit(:firstname, :lastname, :birthdate, :email, :phone, :address, :city, :school, :feet, :inches, :zip, :apt, :shirt, :ridebike, :physical, :actdesc, :whyjoin, :bikeexp, :athexp, :goal, :password)
+    def rider_params
+        params.require(:rider).permit(:firstname, :lastname, :birthdate, :email, :phone, :address, :city, :school, :feet, :inches, :zip, :apt, :shirt, :ridebike, :physical, :actdesc, :whyjoin, :bikeexp, :athexp, :goal, :password)
     end
     
 end

@@ -1,16 +1,18 @@
  
-<% @flyers.each do |x| %>
+<% @riders.each do |x| %>
 
     <p><strong>Name:</strong> <%= x.firstname %> <%= x.lastname %></p>
     
-    <%= link_to "More info", flyer_path(x) %>
+    <%= link_to "More info", rider_path(x), style:"color: gray" %>
     <p>____________________________________</p>
 <% end %>
 
 
   <% if current_flyer %>
       <ul>
+          <p>Logged In:</p>
         <li><%= current_flyer.email %></li>
-        <li><%= link_to "Log Out", logout_path, method: "delete" %></li>  
+          <br>
+        <li><%= link_to "Log Out", logout_path, method: "delete",style:"color: black" %></li>  
       </ul>
       <% end %>
