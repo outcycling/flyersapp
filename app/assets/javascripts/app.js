@@ -51,3 +51,29 @@ $(window).resize(function(){
     }//close full screen drop menu when pc screen increases.
 });
 
+
+
+var mySwiper = new Swiper ('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: '.swiper-pagination',
+
+            // Navigation arrows
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            speed: 100,
+            roundLengths: true,
+//            autoplay: 2500,
+            coverflow: {rotate: 50},
+            spaceBetween: 2,
+            scrollbar: ".swiper-scrollbar",
+            scrollbarDraggable: true,
+            effect: "fade",
+            grabCursor: "true",
+            zoom: true,  
+
+          });  
+

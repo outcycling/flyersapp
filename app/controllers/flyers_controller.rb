@@ -4,7 +4,7 @@ class FlyersController < ApplicationController
     
     def index
         
-       @riders = Rider.all.order("firstname DESC") 
+       @riders = Rider.all.order("firstname") 
         
         if params[:search]
             @riders = Rider.search(params[:search]).all.order("firstname DESC")
