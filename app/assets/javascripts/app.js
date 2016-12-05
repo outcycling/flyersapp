@@ -4,7 +4,7 @@ var open=false;
 
 $("html").click(function(){
     if (open===true){
-   $("#drop-menu").slideUp(200,function(){
+   $("#drop-menu").slideUp(20,function(){
        open=false;
    });
         
@@ -13,7 +13,7 @@ $("html").click(function(){
 
 $(".menu-about").click(function(e) {
     e.preventDefault();
-    $("#drop-menu").slideToggle(200,"linear",
+    $("#drop-menu").slideToggle(50,"linear",
     function(){
         if (open===false){
             open=true;

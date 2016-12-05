@@ -1,5 +1,6 @@
 <%= form_for(@rider) do |f| %>
     <div class="field">
+        <%= @rider.errors.full_messages if @rider.errors.any? %>
         <span>First </span><%= f.label :firstname %> 
         <%= text_field(:rider, :firstname) %><br><br>
         <%= f.label :lastname %> 
