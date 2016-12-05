@@ -69,7 +69,7 @@
     
                     <h1>2017 APPLICATION</h1>
                 <h5>Accepting applications beginning Jan 2017.</h5>
-                
+                <p style="color:red"> <%= @rider.errors.full_messages if @rider.errors.any? %> </p>
                 <%= form_for(@rider) do |f| %>
     <div class="field">
         <%= f.label :firstname,"First Name:" %> 

@@ -38,7 +38,8 @@
 
 <% @riders.each do |x| %>
 
-    <p><strong>Name:</strong> <%= x.firstname %> <%= x.lastname %></p>
+    <p><strong>Name:</strong> <%= x.firstname %> <%= x.lastname %><br><br><strong>Email:</strong> <%= x.email %></p>
+    <p><strong>Shirt:</strong> <%= x.shirt %> <strong>id:</strong><%= x.id %></p>
     
     <%= link_to "More info", rider_path(x), style:"color: gray" %>
     <p>____________________________________</p>

@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get '/flyers/:id/edit' => 'flyers#edit', as: :edit_rider    
     
   patch 'flyers/:id' => 'flyers#update'    
-#  post '/flyers' => 'flyers#create'       
+#  post '/flyers' => 'flyers#create'  
+    
     
   get '/sign_in' => 'sessions#new', as: :sign_in
     

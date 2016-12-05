@@ -12,7 +12,7 @@ class RidersController < ApplicationController
             
             redirect_to '/static_pages/thanks'
         else 
-            render 'new'
+            render :new
         end
     end
     
