@@ -9,7 +9,7 @@ class RidersController < ApplicationController
     def create
        @rider = Rider.new(rider_params)
         if @rider.save
-            
+  
             redirect_to '/static_pages/thanks'
         else 
             render :new

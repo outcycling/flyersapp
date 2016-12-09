@@ -4,10 +4,19 @@ class FlyersController < ApplicationController
     
     def index
         
-        if params[:search]
-            @riders = Rider.search(params[:search]).order("firstname")
-        elsif params[:shirt]
-            @riders = Rider.shirt(params[:shirt]).order("firstname")  
+        if params[:search] && params[:shirt]
+            
+            @riders = Rider.search(params[:search],params[:shirt]).order("firstname")
+            
+       
+        
+        elsif params[:search] || params[:shirt]
+            if params[:search]
+                params[:shirt]="" 
+                @riders = Rider.search(params[:search],params[:shirt]).order("firstname")
+            elsif params[:search]=""
+                @riders = Rider.search(params[:search],params[:shirt]).order("firstname")  
+            end
         else
             @riders = Rider.all.order("firstname")        
         end        

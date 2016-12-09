@@ -251,8 +251,14 @@ h5{
 }
 
 #partners ul img {
-    height: 55px;
-    
+    height: 55px;  
+}
+
+#contact-info {
+    color: darkgray;
+    font-size: .7rem;
+    padding-left: 6px;
+
 }
 
 h1,h2,h3 {
@@ -1001,7 +1007,7 @@ SUPPORTERS PAGE RESPONSIVE
     }
     
     #partners ul {
-        margin-right: 10px;
+        padding-right: 40px;
     }
     
     #partners ul li {
@@ -1353,10 +1359,12 @@ SUPPORTERS PAGE RESPONSIVE
     .supporters-footer{
         display: block;
     }
-    
-    
-    
-  
 
+}
+
+@media(min-width: 1385px){
+    #about-youth {
+        padding-bottom: 148px;
+    }
 }
 

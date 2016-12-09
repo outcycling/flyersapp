@@ -1,7 +1,6 @@
 class Rider < ApplicationRecord
 
-    
-    
+
     validates :firstname, :lastname, :birthdate, :phone, :city, :zip, :school, :feet, :inches, :shirt, :ridebike, :physical, presence: { :message => "required."}
     
     
@@ -10,7 +9,6 @@ class Rider < ApplicationRecord
     validates :athexp, presence: {:message => " Athletic Experience required."}
     validates :goal, presence: {:message => " Personal Goal required."}
     
-    
     before_save { self.email = email.downcase }
     
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -18,15 +16,15 @@ class Rider < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
     
-    def self.search(search)
+    def self.search(name,shirt)
         
-        where("firstname LIKE ? OR lastname LIKE ? ", "%#{search}%", "%#{search}%") 
+        if name==""
+            where(" shirt IS ? ", "#{shirt}")
+        elsif shirt==""   
+            where("firstname ILIKE ? OR lastname ILIKE ?", "%#{name}%", "%#{name}%")
+        else where("firstname ILIKE ? AND shirt IS ?", "%#{name}%", "#{shirt}")
+        end     
     end
     
-    
-    def self.shirt(search)
-        
-        where(" shirt IS ? ", "#{search}") 
-    end
     
 end

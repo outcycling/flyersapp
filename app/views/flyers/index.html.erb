@@ -1,24 +1,18 @@
- 
+<br> 
 <% if current_flyer %>
-      
-          <span>Logged In: </span>
-        <span><%= current_flyer.email %></span>
-          <br>
-        <p><%= link_to "Log Out", logout_path, method: "delete",style:"color: grey" %></p>  
-      
-      <% end %>
+    <span>Logged In: </span>
+    <span><%= current_flyer.email %></span>
+    <br>
+    <p><%= link_to "Log Out", logout_path, method: "delete",style:"color: grey" %></p>  
+<% end %>
+<br>
+
 
 <%= form_tag(flyers_path, method: "get", id: "search-form") do %>
-    <span>Search Riders by first or last name:</span>
-    <%= text_field_tag :search, params[:search] %>
-
-
-    <%= submit_tag "Search" %>
-<% end %>
-
-
-<%= form_tag(flyers_path, :method => "get", id: "search-form") do %>
-<span>Search by Shirt Size:</span>
+    <span>Search:</span><br>
+    <span>First Name:</span>
+    <%= text_field_tag :search, params[:search] %><br>
+        <span>Shirt Size:</span>
         <%= radio_button_tag :shirt, "S" %>
             <%= label_tag(:shirt, "Small") %>
         <%= radio_button_tag :shirt, "M" %>
@@ -27,20 +21,26 @@
             <%= label_tag(:shirt, "Large") %>
         <%= radio_button_tag :shirt, "XL" %>
             <%= label_tag(:shirt, "X-Large") %><br><br>
-        <%= submit_tag "Search" %>
+    <%= submit_tag "Search" %>
 <% end %>
+
+
+
+<%= form_tag(flyers_path, :method => "get", id: "search-form") do %>
+        <%= submit_tag "Show All" %>
+<% end %>
+
 
 
 <% if @riders.blank? %>
-  <h4>There are no riders with
-      <%= params[:shirt] %> <%= params[:search] %>.</h4>
+  <h4>No riders found with Name: <%= params[:search] %> and Shirt: <%= params[:shirt] %>.</h4>
 <% end %>
 
-<% @riders.each do |x| %>
 
+
+<% @riders.each do |x| %>
     <p><strong>Name:</strong> <%= x.firstname %> <%= x.lastname %><br><br><strong>Email:</strong> <%= x.email %></p>
     <p><strong>Shirt:</strong> <%= x.shirt %> <strong>id:</strong><%= x.id %></p>
-    
     <%= link_to "More info", rider_path(x), style:"color: gray" %>
     <p>____________________________________</p>
 <% end %>
