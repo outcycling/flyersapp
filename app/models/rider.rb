@@ -19,10 +19,10 @@ class Rider < ApplicationRecord
     def self.search(name,shirt)
         
         if name==""
-            where(" shirt IS ? ", "#{shirt}")
+            where(" shirt ~ ? ", shirt)
         elsif shirt==""   
             where("firstname ILIKE ? OR lastname ILIKE ?", "%#{name}%", "%#{name}%")
-        else where("firstname ILIKE ? AND shirt IS ?", "%#{name}%", "#{shirt}")
+        else where("firstname ILIKE ? AND shirt ~ ?", "%#{name}%", shirt)
         end     
     end
     
